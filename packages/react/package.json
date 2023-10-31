@@ -1,6 +1,6 @@
 {
   "name": "june-so-client-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
@@ -21,7 +21,10 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "build": "pnpm build:tsc && pnpm build:esbuild",
     "build:tsc": "tsc --emitDeclarationOnly ",
