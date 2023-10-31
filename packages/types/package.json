@@ -1,5 +1,5 @@
 {
-  "name": "june-so-client-types",
+  "name": "june-so-sandbox-types",
   "version": "0.0.1",
   "description": "",
   "author": "junghyeonsu",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daangn/june-so-client.git",
+    "url": "git+https://github.com/junghyeonsu/june-so-sandbox.git",
     "directory": "packages/types"
   },
   "publishConfig": {

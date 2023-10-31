@@ -1,12 +1,12 @@
 {
-  "name": "june-so-client-react",
+  "name": "june-so-sandbox-react",
   "version": "0.0.1",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daangn/june-so-client.git",
+    "url": "git+https://github.com/junghyeonsu/june-so-sandbox.git",
     "directory": "packages/react"
   },
   "publishConfig": {
@@ -21,17 +21,14 @@
     },
     "./package.json": "./package.json"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
     "build": "pnpm build:tsc && pnpm build:esbuild",
     "build:tsc": "tsc --emitDeclarationOnly ",
     "build:esbuild": "node ./build.js"
   },
   "dependencies": {
-    "june-so-client-types": "workspace:^"
+    "june-so-sandbox-types": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.33",

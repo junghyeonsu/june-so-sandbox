@@ -1,4 +1,4 @@
-# june-so-client
+# june-so-sandbox
 
 > [june.so](https://www.june.so/) client for sandbox platform
 
@@ -14,7 +14,7 @@ So this client just call june.so api directly use `fetch`.
 ## install
 
 ```bash
-npm install june-so-client-react
+npm install june-so-sandbox-react
 ```
 
 ## react usage
