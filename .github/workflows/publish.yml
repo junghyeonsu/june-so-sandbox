@@ -1,0 +1,44 @@
+on:
+  push:
+    branches:
+      - main
+
+name: 패키지를 출판해요 - main
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+jobs:
+  publish-package:
+    name: 패키지를 출판해요
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: 8.8.0
+          run_install: true
+
+      - name: build
+        run: |
+          pnpm build
+        shell: bash
+
+      - name: 릴리즈 Pull Request를 만들거나 패키지를 배포해요
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          publish: pnpm release
+          version: pnpm version
+        env:
+          NODE_AUTH_TOKEN: ${{ github.token }}
+          NPM_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}

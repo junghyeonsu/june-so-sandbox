@@ -1,0 +1,22 @@
+{
+  "name": "@daangn/june-so-client-monorepo",
+  "private": true,
+  "description": "",
+  "author": "junghyeonsu",
+  "license": "ISC",
+  "scripts": {
+    "build": "pnpm ultra -r build",
+    "release": "pnpm changeset publish",
+    "version": "pnpm changeset version"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.3.2",
+    "@changesets/cli": "^2.26.2",
+    "typescript": "^5.2.2",
+    "ultra-runner": "^3.10.5"
+  },
+  "ultra": {
+    "concurrent": ["build"]
+  },
+  "packageManager": "pnpm@8.8.0"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "@daangn/june-so-client-types",
+  "version": "0.0.0",
+  "description": "",
+  "author": "junghyeonsu",
+  "license": "ISC",
+  "main": "index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daangn/june-so-client.git",
+    "directory": "packages/types"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
