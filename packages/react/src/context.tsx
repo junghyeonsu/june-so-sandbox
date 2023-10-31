@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IdentifyProps, TrackProps } from "@daangn/june-so-client-types";
+import { IdentifyProps, TrackProps } from "june-so-client-types";
 
 export interface JuneContextType {
   identify: (props: IdentifyProps) => Promise<void>;
