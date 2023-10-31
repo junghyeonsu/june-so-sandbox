@@ -12,6 +12,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -27,7 +28,7 @@
     "build:esbuild": "node ./build.js"
   },
   "dependencies": {
-    "@daangn/june-so-client-types": "workspace:^"
+    "june-so-client-types": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.33",

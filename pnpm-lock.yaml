@@ -23,7 +23,7 @@ importers:
 
   packages/react:
     dependencies:
-      '@daangn/june-so-client-types':
+      june-so-client-types:
         specifier: workspace:^
         version: link:../types
     devDependencies:
@@ -39,6 +39,15 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.2.2
+
+  packages/test:
+    dependencies:
+      june-so-client-react:
+        specifier: workspace:^
+        version: link:../react
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
 
   packages/types:
     devDependencies:
@@ -1481,7 +1490,6 @@ packages:
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: true
 
   /js-yaml@3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -1554,7 +1562,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: true
 
   /lru-cache@4.1.5:
     resolution: {integrity: sha512-sWZlbEP2OsHNkXrMl5GYk/jKk70MBng6UU4YI/qGDYbgf6YbP4EvmqISbXCoJiRKs+1bSpFHVgQxvJ17F2li5g==}
@@ -1828,7 +1835,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: true
 
   /read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
