@@ -1,5 +1,11 @@
 # june-so-client-types
 
+## 0.0.2
+
+### Patch Changes
+
+- 61a1555: change packages name
+
 ## 0.0.1
 
 ### Patch Changes
