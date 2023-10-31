@@ -20,7 +20,7 @@ npm install june-so-sandbox-react
 ## react usage
 
 ```tsx
-import { JuneProvider, useJune } from "june-so-client-react";
+import { JuneProvider, useJune } from "june-so-sandbox-react";
 
 const App = ({ children }) => {
   return <JuneProvider writeKey={"%YOUR_WRITE_KEY%"}>{children}</JuneProvider>;
