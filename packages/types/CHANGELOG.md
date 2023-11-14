@@ -1,5 +1,11 @@
 # june-so-client-types
 
+## 0.0.3
+
+### Patch Changes
+
+- 6ba4cbb: add types/react peerDep in preact
+
 ## 0.0.2
 
 ### Patch Changes
