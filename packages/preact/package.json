@@ -1,6 +1,6 @@
 {
   "name": "june-so-sandbox-preact",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
@@ -21,10 +21,7 @@
     },
     "./package.json": "./package.json"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
     "build": "pnpm build:tsc && pnpm build:esbuild",
     "build:tsc": "tsc --emitDeclarationOnly ",
@@ -40,6 +37,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "preact": "^10.0.0"
+    "preact": "^10.0.0",
+    "@types/react": "^18.0.0"
   }
 }
