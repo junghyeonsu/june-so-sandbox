@@ -1,6 +1,6 @@
 {
-  "name": "june-so-sandbox-preact",
-  "version": "0.0.3",
+  "name": "@june-so-sandbox/preact",
+  "version": "0.2.0",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
@@ -21,17 +21,16 @@
     },
     "./package.json": "./package.json"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
-    "build": "pnpm build:tsc && pnpm build:esbuild",
+    "prepack": "pnpm build",
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && pnpm build:tsc && pnpm build:esbuild",
     "build:tsc": "tsc --emitDeclarationOnly ",
     "build:esbuild": "node ./build.js"
   },
   "dependencies": {
-    "june-so-sandbox-types": "workspace:^"
+    "@june-so-sandbox/api": "^0.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.33",

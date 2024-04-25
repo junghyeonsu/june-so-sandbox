@@ -1,9 +1,20 @@
 import * as React from "react";
-import { IdentifyProps, TrackProps } from "june-so-sandbox-types";
+import {
+  IdentifyProps,
+  TrackProps,
+  GroupProps,
+  PageProps,
+  group as groupApi,
+  identify as identifyApi,
+  page as pageApi,
+  track as trackApi,
+} from "@june-so-sandbox/api";
 
 export interface JuneContextType {
-  identify: (props: IdentifyProps) => Promise<void>;
-  track: (props: TrackProps) => Promise<void>;
+  identify: (props: Omit<IdentifyProps, "writeKey">) => Promise<Response | undefined>;
+  track: (props: Omit<TrackProps, "writeKey">) => Promise<Response | undefined>;
+  group: (props: Omit<GroupProps, "writeKey">) => Promise<Response | undefined>;
+  page: (props: Omit<PageProps, "writeKey">) => Promise<Response | undefined>;
 }
 
 export interface JuneProviderProps {
@@ -13,56 +24,38 @@ export interface JuneProviderProps {
   disabled?: boolean;
 }
 
-const BASE_URL = "https://api.june.so/sdk";
-
-const JuneContext = React.createContext<JuneContextType>({
-  identify: async () => {},
-  track: async () => {},
-});
+const JuneContext = React.createContext<JuneContextType | null>(null);
 
 export const JuneProvider: React.FC<JuneProviderProps> = ({ children, writeKey, disabled = false }) => {
   if (!writeKey) {
     throw new Error("[useJune] writeKey is required");
   }
 
-  const headers = {
-    Authorization: `Basic ${writeKey}`,
-    "Content-Type": "application/json",
-  };
-
-  const track = async (props: TrackProps) => {
+  const track = async (props: Omit<TrackProps, "writeKey">) => {
     if (disabled) return;
 
-    try {
-      await fetch(`${BASE_URL}/track`, {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          ...props,
-        }),
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    return trackApi({ writeKey, ...props });
   };
 
-  const identify = async (props: IdentifyProps) => {
+  const identify = async (props: Omit<IdentifyProps, "writeKey">) => {
     if (!props.userId || disabled) return;
 
-    try {
-      await fetch(`${BASE_URL}/identify`, {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          ...props,
-        }),
-      });
-    } catch (error) {
-      console.error(error);
-    }
+    return identifyApi({ writeKey, ...props });
   };
 
-  return <JuneContext.Provider value={{ identify, track }}>{children}</JuneContext.Provider>;
+  const group = async (props: Omit<GroupProps, "writeKey">) => {
+    if (disabled) return;
+
+    return groupApi({ writeKey, ...props });
+  };
+
+  const page = async (props: Omit<PageProps, "writeKey">) => {
+    if (disabled) return;
+
+    return pageApi({ writeKey, ...props });
+  };
+
+  return <JuneContext.Provider value={{ identify, track, group, page }}>{children}</JuneContext.Provider>;
 };
 
 export const useJune = () => {

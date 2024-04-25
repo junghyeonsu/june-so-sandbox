@@ -1,5 +1,5 @@
 {
-  "name": "@june-so-sandbox/react",
+  "name": "@june-so-sandbox/api",
   "version": "0.2.0",
   "description": "",
   "author": "junghyeonsu",
@@ -7,7 +7,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/junghyeonsu/june-so-sandbox.git",
-    "directory": "packages/react"
+    "directory": "packages/api"
   },
   "publishConfig": {
     "access": "public"
@@ -29,9 +29,6 @@
     "build:tsc": "tsc --emitDeclarationOnly ",
     "build:esbuild": "node ./build.js"
   },
-  "dependencies": {
-    "@june-so-sandbox/api": "^0.2.0"
-  },
   "devDependencies": {
     "@types/react": "^18.2.33",
     "esbuild": "^0.19.5",
@@ -39,6 +36,7 @@
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
-    "react": "^17.0.0 || ^18.0.0"
+    "preact": "^10.0.0",
+    "@types/react": "^18.0.0"
   }
 }

@@ -1,15 +1,15 @@
-# june-so-sandbox-preact
+# @june-so-sandbox/preact
 
 ## install
 
 ```bash
-npm install june-so-sandbox-preact
+npm install @june-so-sandbox/preact
 ```
 
 ## react usage
 
 ```tsx
-import { JuneProvider, useJune } from "june-so-sandbox-preact";
+import { JuneProvider, useJune } from "@june-so-sandbox/preact";
 
 const App = ({ children }) => {
   return <JuneProvider writeKey={"%YOUR_WRITE_KEY%"}>{children}</JuneProvider>;
