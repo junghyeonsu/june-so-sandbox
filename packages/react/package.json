@@ -1,6 +1,6 @@
 {
   "name": "@june-so-sandbox/react",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
@@ -21,7 +21,10 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "prepack": "pnpm build",
     "clean": "rm -rf dist",
@@ -30,7 +33,7 @@
     "build:esbuild": "node ./build.js"
   },
   "dependencies": {
-    "@june-so-sandbox/api": "^0.2.0"
+    "@june-so-sandbox/api": "^0.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.33",

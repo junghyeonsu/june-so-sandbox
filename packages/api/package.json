@@ -1,6 +1,6 @@
 {
   "name": "@june-so-sandbox/api",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "",
   "author": "junghyeonsu",
   "license": "ISC",
@@ -21,7 +21,10 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "prepack": "pnpm build",
     "clean": "rm -rf dist",
