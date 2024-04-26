@@ -33,7 +33,7 @@ importers:
   packages/preact:
     dependencies:
       '@june-so-sandbox/api':
-        specifier: ^0.2.0
+        specifier: ^0.3.0
         version: link:../api
       preact:
         specifier: ^10.0.0
@@ -55,7 +55,7 @@ importers:
   packages/react:
     dependencies:
       '@june-so-sandbox/api':
-        specifier: ^0.2.0
+        specifier: ^0.3.0
         version: link:../api
     devDependencies:
       '@types/react':
