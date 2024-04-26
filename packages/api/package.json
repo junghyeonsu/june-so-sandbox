@@ -30,13 +30,7 @@
     "build:esbuild": "node ./build.js"
   },
   "devDependencies": {
-    "@types/react": "^18.2.33",
     "esbuild": "^0.19.5",
-    "react": "^18.2.0",
     "typescript": "^5.2.2"
-  },
-  "peerDependencies": {
-    "preact": "^10.0.0",
-    "@types/react": "^18.0.0"
   }
 }
