@@ -21,14 +21,10 @@
     },
     "./package.json": "./package.json"
   },
-  "files": [
-    "src",
-    "dist"
-  ],
+  "files": ["src", "dist"],
   "scripts": {
     "prepack": "pnpm build",
-    "clean": "rm -rf dist",
-    "build": "pnpm clean && pnpm build:tsc && pnpm build:esbuild",
+    "build": "pnpm build:tsc && pnpm build:esbuild",
     "build:tsc": "tsc --emitDeclarationOnly ",
     "build:esbuild": "node ./build.js"
   },
