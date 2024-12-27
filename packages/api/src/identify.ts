@@ -40,7 +40,6 @@ export const identify = (props: IdentifyProps) => {
 
   const headers = {
     Authorization: `Basic ${writeKey}`,
-    "Content-Type": "application/json",
   };
 
   return fetch("https://api.june.so/sdk/identify", {

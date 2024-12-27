@@ -45,7 +45,6 @@ export const track = (props: TrackProps) => {
 
   const headers = {
     Authorization: `Basic ${writeKey}`,
-    "Content-Type": "application/json",
   };
 
   return fetch("https://api.june.so/sdk/track", {

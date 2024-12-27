@@ -1,5 +1,13 @@
 # june-so-client-react
 
+## 0.3.1
+
+### Patch Changes
+
+- remove content-type
+- Updated dependencies
+  - @june-so-sandbox/api@0.3.1
+
 ## 0.3.0
 
 ### Minor Changes
